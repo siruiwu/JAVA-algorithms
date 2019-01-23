@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		int A;
+		int B;
+		int C;
+		Scanner in = new Scanner(System.in);
+		A = in.nextInt();
+		B = in.nextInt();
+		C = in.nextInt();
+		if (A>B)
+			if (B>C)
+				System.out.println(C+"->"+B+"->"+A);
+			else if (C>A)
+				System.out.println(B+"->"+A+"->"+C);
+			else
+				System.out.println(B+"->"+C+"->"+A);
+		else
+			if (B<C)
+				System.out.println(A+"->"+B+"->"+C);
+			else if (C<A)
+				System.out.println(C+"->"+A+"->"+B);
+			else
+				System.out.println(A+"->"+C+"->"+B);;
+	}
+
+}
