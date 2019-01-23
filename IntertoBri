@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		double centimeter;
+		double inch;
+		double foot;
+		Scanner in = new Scanner(System.in);
+		centimeter = in.nextDouble();
+		foot = centimeter / (100 * 0.3048);
+		inch = (foot - (int)foot)*12;
+		System.out.println((int)foot+" "+ (int)inch);
+		
+		
+	}
+}
