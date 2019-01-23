@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+
+	private static Scanner in;
+
+	public static void main(String[] args) {
+	in = new Scanner(System.in);
+	int x = in.nextInt();
+	
+	if (x == 1){
+	  System.out.print("1 1");
+	  System.exit(0);
+	}
+	
+	int n = 0;
+	int r = 1;
+	int[] numbers = new int[999999];
+	
+	while (r != 0){
+	  numbers[n] = (10 * r + 1)/x;
+	  r = (10 * r + 1)%x;
+	  n++;
+	}
+	
+	
+
+	String s = "";
+	int i = 0;
+	while (i < n) {
+		if (numbers[i] != 0) {
+			break;
+		}
+		i++;
+	}
+	
+	while (i < n) {
+    s = s + numbers[i];
+		i++;
+	}
+
+  n++;
+	System.out.printf(s+" "+n);
+		
+	}
+}
